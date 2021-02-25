@@ -1,0 +1,17 @@
+{
+    "name": "samir-hussein/paymob",
+    "description": "paymob payment gateway",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Samir Ebrahim Hussein",
+        "email": "samirhussein274@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "require": {}
+}
