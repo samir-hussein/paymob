@@ -24,7 +24,7 @@ step 2 :
 step 3 :
 ```php
     $auth = PayMob::AuthenticationRequest();
-    ```
+```
 step 4 : 
 ```php
     $order = PayMob::OrderRegistrationAPI([
@@ -40,7 +40,7 @@ step 4 :
           "quantity" => "2"
       ]]
     ]);
-    ```
+```
     
 step 5 : 
 ```php
@@ -65,7 +65,7 @@ step 5 :
           "state" => "Utah"
       ]
     ]);
-    ```
+```
     
 finally 
   <iframe width="100%" height="700" src="https://accept.paymob.com/api/acceptance/iframes/{{your frame id here}}?payment_token=<?= $PaymentKey->token // from step 5 ?>">
