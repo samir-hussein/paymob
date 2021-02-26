@@ -69,5 +69,5 @@ step 5 :
     
 finally 
 ```html
-  <iframe width="100%" height="700" src="https://accept.paymob.com/api/acceptance/iframes/{{your_frame_id_here}}?payment_token=<?= $PaymentKey->token // from step 5 ?>">
+  <iframe src="https://accept.paymob.com/api/acceptance/iframes/{{your_frame_id_here}}?payment_token=<?= $PaymentKey->token // from step 5 ?>">
 ```
