@@ -4,10 +4,13 @@ paymob payment gateway
 
 ## Installation
 composer require samir-hussein/paymob
+
+## Usage
     
 step 1 :
+```php
     require_once "vendor/autoload.php";
-
+```
 step 2 :
     $config = [
       'PayMob_User_Name' => 'your user name',
