@@ -3,7 +3,7 @@ paymob payment gateway
 
 
 instillation
-    composer require samir-hussein/paymob
+composer require samir-hussein/paymob
     
 step 1 :
     require_once "vendor/autoload.php";
