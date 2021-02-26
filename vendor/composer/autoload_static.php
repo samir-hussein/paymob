@@ -7,16 +7,21 @@ namespace Composer\Autoload;
 class ComposerStaticInit5249d7fdb4a33a43853768718981554e
 {
     public static $prefixLengthsPsr4 = array (
-        'A' => 
+        'P' => 
         array (
-            'App\\' => 4,
+            'Paymob\\' => 7,
+            'PayMob\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'App\\' => 
+        'Paymob\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/paymob',
+        ),
+        'PayMob\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/paymob/laravel',
         ),
     );
 

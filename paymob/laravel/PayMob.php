@@ -1,26 +1,22 @@
 <?php
 
-namespace App;
+namespace PayMob;
 
 class PayMob
 {
-    private static $username;
-    private static $password;
-    private static $integration_id;
 
-    public function __construct(array $config)
+    public function __construct()
     {
-        self::$username = $config['PayMob_User_Name'];
-        self::$password = $config['PayMob_Password'];
-        self::$integration_id = $config['PayMob_Integration_Id'];
+        //
     }
 
     public static function AuthenticationRequest()
     {
         $userInfo = [
-            'username' => self::$username,
-            'password' => self::$password
+            'username' => config('paymob.username'),
+            'password' => config('paymob.password'),
         ];
+
         $postData = json_encode($userInfo);
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://accept.paymobsolutions.com/api/auth/tokens');
@@ -63,7 +59,7 @@ class PayMob
     public static function PaymentKeyRequest($requestData)
     {
         $requestData['expiration'] = 3600;
-        $requestData['integration_id'] = self::$integration_id;
+        $requestData['integration_id'] = config('paymob.integration_id');
         $postData = json_encode($requestData);
         $ch = curl_init();
 

@@ -10,7 +10,8 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "App\\": "app"
+            "PayMob\\": "paymob/laravel",
+            "Paymob\\": "paymob"
         }
     },
     "require": {}

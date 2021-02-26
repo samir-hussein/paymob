@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\' => array($baseDir . '/app'),
+    'Paymob\\' => array($baseDir . '/paymob'),
+    'PayMob\\' => array($baseDir . '/paymob/laravel'),
 );
