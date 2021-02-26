@@ -20,7 +20,7 @@ step 2 :
     ];
     
     $init = new PayMob($config);
-    ```
+```
 step 3 :
 ```php
     $auth = PayMob::AuthenticationRequest();
