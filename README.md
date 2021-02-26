@@ -6,7 +6,7 @@ paymob payment gateway https://paymob.com
 ```bash
 composer require samir-hussein/paymob
 ```
-## Usage
+## Usage In php native
     
 step 1 :
 ```php
