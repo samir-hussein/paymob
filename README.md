@@ -11,6 +11,7 @@ composer require samir-hussein/paymob
 step 1 :
 ```php
     require_once "vendor/autoload.php";
+    use App\PayMob;
 ```
 step 2 :
 ```php
