@@ -12,6 +12,7 @@ step 1 :
     require_once "vendor/autoload.php";
 ```
 step 2 :
+```php
     $config = [
       'PayMob_User_Name' => 'your user name',
       'PayMob_Password' => 'your password',
@@ -19,11 +20,13 @@ step 2 :
     ];
     
     $init = new PayMob($config);
-    
+    ```
 step 3 :
+```php
     $auth = PayMob::AuthenticationRequest();
-    
+    ```
 step 4 : 
+```php
     $order = PayMob::OrderRegistrationAPI([
       'auth_token' => $auth->token, // from step 3
       'amount_cents' => 150 * 100, //put your price
@@ -37,8 +40,10 @@ step 4 :
           "quantity" => "2"
       ]]
     ]);
+    ```
     
 step 5 : 
+```php
     $PaymentKey = PayMob::PaymentKeyRequest([
       'auth_token' => $auth->token, // from step 3
       'amount_cents' => 150 * 100,//put your price
@@ -60,6 +65,7 @@ step 5 :
           "state" => "Utah"
       ]
     ]);
+    ```
     
 finally 
   <iframe width="100%" height="700" src="https://accept.paymob.com/api/acceptance/iframes/{{your frame id here}}?payment_token=<?= $PaymentKey->token // from step 5 ?>">
