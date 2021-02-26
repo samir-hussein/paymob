@@ -4,7 +4,7 @@ paymob payment gateway https://paymob.com
 
 ## Installation
 ```bash
-$ composer require samir-hussein/paymob
+composer require samir-hussein/paymob
 ```
 ## Usage
     
