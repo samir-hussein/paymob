@@ -2,7 +2,7 @@
 paymob payment gateway
 
 
-instillation
+## Installation
 composer require samir-hussein/paymob
     
 step 1 :
