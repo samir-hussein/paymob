@@ -15,7 +15,7 @@ class PayMobServiceProvider extends ServiceProvider
     {
         $this->publishes([
             // Config file.
-            'config/paymob.php' => config_path('paymob.php'),
+            __DIR__ . '/config/paymob.php' => config_path('paymob.php'),
         ]);
     }
 
