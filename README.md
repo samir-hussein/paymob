@@ -16,7 +16,7 @@ step 1 :
 step 2 :
 ```php
     $config = [
-      'PayMob_User_Name' => 'your user name',
+      'PayMob_User_Name' => 'your username',
       'PayMob_Password' => 'your password',
       'PayMob_Integration_Id' => 'Integration_Id'
     ];
