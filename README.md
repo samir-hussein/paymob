@@ -1,5 +1,5 @@
 # paymob
-paymob payment gateway
+paymob payment gateway https://paymob.com
 
 
 ## Installation
