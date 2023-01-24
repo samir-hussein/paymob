@@ -84,4 +84,59 @@ class PayMob
         curl_close($ch);
         return json_decode($response);
     }
+
+    public static function refundTransaction(string $auth_token, int $transaction_id, int $amount_cents)
+    {
+        $requestData = [
+            'auth_token' => $auth_token,
+            'transaction_id' => $transaction_id,
+            'amount_cents' => $amount_cents,
+        ];
+
+        $postData = json_encode($requestData);
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://accept.paymob.com/api/acceptance/void_refund/refund');
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+
+        $response = curl_exec($ch);
+        if ($response === false) {
+            echo curl_error($ch);
+        }
+        curl_close($ch);
+        return json_decode($response);
+    }
+
+    public static function voidTransaction(string $auth_token, int $transaction_id)
+    {
+        $requestData = [
+            'auth_token' => $auth_token,
+            'transaction_id' => $transaction_id,
+        ];
+
+        $postData = json_encode($requestData);
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, 'https://accept.paymob.com/api/acceptance/void_refund/void?token=' . $auth_token);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json'
+        ));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+
+        $response = curl_exec($ch);
+        if ($response === false) {
+            echo curl_error($ch);
+        }
+        curl_close($ch);
+        return json_decode($response);
+    }
 }
