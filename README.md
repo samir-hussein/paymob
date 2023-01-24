@@ -181,12 +181,7 @@ class PayMobController extends Controller
             'currency' => 'EGP',
             'delivery_needed' => false, // another option true
             'merchant_order_id' => 1000, //put order id from your database must be unique id
-            'items' => [[ // all items information
-                "name" => "ASC1515",
-                "amount_cents" => 150 * 100,
-                "description" => "Smart Watch",
-                "quantity" => "2"
-            ]]
+            'items' => [] // all items information or leave it empty
         ]);
         $PaymentKey = PayMob::PaymentKeyRequest([
             'auth_token' => $auth->token,
@@ -258,24 +253,24 @@ Route::post('/checkout/processed',function(Request $request){
 # Refund Transaction
 
 ```php
-Route::post('/refund',function(){
+Route::post('/refund', function () {
     $auth = PayMob::AuthenticationRequest();
     return PayMob::refundTransaction(
-                $auth->token,
-                $transaction_id,
-                $amount_cents // amount in cent 100 EGP = 100 * 100 cent
-            );
+        $auth->token,
+        $transaction_id,
+        $amount_cents // amount in cent 100 EGP = 100 * 100 cent
+    );
 });
 ```
 
 # Void Transaction
 
 ```php
-Route::post('/void',function(){
+Route::post('/void', function () {
     $auth = PayMob::AuthenticationRequest();
     return  PayMob::voidTransaction(
-                $auth->token,
-                $transaction_id,
-            );
+        $auth->token,
+        $transaction_id,
+    );
 });
 ```
