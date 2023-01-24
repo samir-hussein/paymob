@@ -1,7 +1,8 @@
 # paymob
 
 paymob payment gateway https://paymob.com
-paymob payment gateway API documentation https://docs.paymob.com/docs/accept-standard-redirect
+
+<p>paymob payment gateway API documentation https://docs.paymob.com/docs/accept-standard-redirect</p>
 
 ## Installation
 
