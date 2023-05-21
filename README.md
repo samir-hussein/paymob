@@ -4,6 +4,8 @@ paymob payment gateway https://paymob.com
 
 <p>paymob payment gateway API documentation https://docs.paymob.com/docs/accept-standard-redirect</p>
 
+<p>Youtube tutorial https://www.youtube.com/watch?v=bRCZu9J8hWE&ab_channel=SamirHussein</p>
+
 ## Installation
 
 ```bash
